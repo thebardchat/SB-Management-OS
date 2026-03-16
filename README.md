@@ -1,6 +1,12 @@
 # SB-Management-OS
 
-> Small Business Management Operating System — operations toolkit for a ready-mix concrete company in North Alabama.
+> **DEPRECATED** — This repo has been consolidated into [MASTER-Scheduler-Dashboard-SRM](https://github.com/thebardchat/MASTER-Scheduler-Dashboard-SRM).
+>
+> All SOPs, coaching scripts, personnel tools, and affirmations now live in the MASTER repo alongside the dispatch router. This repo is archived for reference only. Do not develop here.
+
+---
+
+*Original description: Small Business Management Operating System — operations toolkit for a ready-mix concrete company in North Alabama.*
 
 ---
 
