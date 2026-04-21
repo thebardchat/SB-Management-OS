@@ -4,6 +4,12 @@
 
 # SB-Management-OS
 
+> **Try Claude free for 2 weeks** — the AI behind this entire ecosystem. [Start your free trial →](https://claude.ai/referral/4fAMYN9Ing)
+
+---
+
+
+
 > Small Business Management Operating System — operations toolkit for a ready-mix concrete company in North Alabama.
 
 ---
