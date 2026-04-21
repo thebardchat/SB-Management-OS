@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SB Management OS — Small Business Operating System for SRM Concrete</title>
+  <meta name="description" content="Small Business Management Operating System for SRM Concrete — a ready-mix concrete company in North Alabama. SOPs, dispatch, scheduling, operations toolkit."/>
+  <meta property="og:image" content="social-card.svg"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#111111;color:#e5e5e5;font-family:'Courier New',monospace;overflow-x:hidden;min-height:100vh;padding-bottom:60px}
+    canvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:0;pointer-events:none}
+    .content{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+    .hero{text-align:center;padding:4rem 0 2rem}
+    .hero-badge{display:inline-block;background:rgba(156,163,175,0.1);border:1px solid rgba(156,163,175,0.3);color:#9ca3af;font-size:0.75rem;letter-spacing:0.2em;text-transform:uppercase;padding:0.4rem 1.2rem;border-radius:2px;margin-bottom:2rem}
+    h1{font-size:clamp(2rem,5.5vw,3.5rem);font-weight:900;letter-spacing:0.03em;line-height:1.1;color:#f5f5f5}
+    .subtitle{font-size:1rem;color:#9ca3af;margin:1rem 0 2rem;letter-spacing:0.08em}
+    .referral-bar{border:1px solid rgba(245,158,11,0.3);background:rgba(245,158,11,0.05);border-radius:4px;padding:0.8rem 1.5rem;text-align:center;margin:0 auto 2rem;max-width:600px;font-size:0.8rem}
+    .referral-bar a{color:#f59e0b}
+    .section{margin:3rem 0;padding:2rem;background:rgba(30,30,30,0.8);border:1px solid rgba(80,80,80,0.4);border-radius:4px}
+    .section-title{font-size:0.85rem;letter-spacing:0.25em;text-transform:uppercase;color:#6b7280;margin-bottom:1.5rem;display:flex;align-items:center;gap:0.8rem}
+    .section-title::after{content:'';flex:1;height:1px;background:rgba(100,100,100,0.3)}
+    .values-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    .value-card{background:rgba(20,20,20,0.8);border:1px solid rgba(80,80,80,0.3);border-radius:4px;padding:1.5rem;text-align:center;transition:border-color 0.3s,transform 0.3s;position:relative;overflow:hidden}
+    .value-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+    .value-card:nth-child(1)::before{background:#6b7280}
+    .value-card:nth-child(2)::before{background:#9ca3af}
+    .value-card:nth-child(3)::before{background:#6b7280}
+    .value-card:nth-child(4)::before{background:#9ca3af}
+    .value-card:hover{border-color:rgba(156,163,175,0.5);transform:translateY(-2px)}
+    .value-icon{font-size:2rem;margin-bottom:0.8rem}
+    .value-label{font-size:1.2rem;font-weight:bold;color:#d1d5db;letter-spacing:0.1em;text-transform:uppercase}
+    .value-desc{font-size:0.8rem;color:#6b7280;margin-top:0.5rem;line-height:1.6}
+    .feature-list{list-style:none}
+    .feature-list li{padding:0.6rem 0;border-bottom:1px solid rgba(60,60,60,0.5);color:#9ca3af;font-size:0.9rem;display:flex;gap:0.8rem}
+    .feature-list li::before{content:'▸';color:#6b7280;flex-shrink:0}
+    .tech-tags{display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1rem}
+    .tag{background:rgba(30,30,30,0.8);border:1px solid rgba(80,80,80,0.4);color:#9ca3af;font-size:0.75rem;padding:0.3rem 0.8rem;border-radius:2px;letter-spacing:0.1em}
+    .links{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin:2rem 0}
+    .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.8rem 2rem;font-family:monospace;font-size:0.85rem;letter-spacing:0.1em;text-transform:uppercase;text-decoration:none;border-radius:3px;transition:all 0.2s}
+    .btn-primary{background:rgba(80,80,80,0.3);border:1px solid rgba(156,163,175,0.5);color:#d1d5db}
+    .btn-primary:hover{background:rgba(80,80,80,0.5)}
+    .btn-secondary{background:rgba(0,0,0,0.3);border:1px solid rgba(60,60,60,0.5);color:#6b7280}
+    .btn-secondary:hover{background:rgba(20,20,20,0.5)}
+    .footer{text-align:center;padding:2rem 0 1rem;font-size:0.8rem;color:#374151;border-top:1px solid rgba(60,60,60,0.3);margin-top:3rem}
+    .region-badge{display:inline-block;background:rgba(30,30,30,0.6);border:1px solid rgba(80,80,80,0.3);color:#6b7280;font-size:0.75rem;padding:0.3rem 1rem;border-radius:2px;letter-spacing:0.15em;text-transform:uppercase}
+  </style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div class="content">
+  <div class="referral-bar">
+    <strong>Try Claude free for 2 weeks</strong> — the AI behind this entire ecosystem. <a href="https://claude.ai/referral/4fAMYN9Ing">Start your free trial →</a>
+  </div>
+
+  <div class="hero">
+    <div class="hero-badge">Small Business Operating System</div>
+    <h1>SB<br>Management OS</h1>
+    <div class="subtitle">Built for SRM Concrete · Hazel Green, AL · Ready-Mix Concrete Operations</div>
+    <div class="region-badge">North Alabama</div>
+  </div>
+
+  <div class="links">
+    <a href="https://github.com/thebardchat/SB-Management-OS" class="btn btn-primary">View on GitHub →</a>
+    <a href="https://github.com/thebardchat" class="btn btn-secondary">thebardchat</a>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Core Values</div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">🏗️</div>
+        <div class="value-label">Service</div>
+        <div class="value-desc">Customer-first dispatch and delivery excellence</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">✨</div>
+        <div class="value-label">Cleanliness</div>
+        <div class="value-desc">Job site and equipment standards</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">💪</div>
+        <div class="value-label">Labor</div>
+        <div class="value-desc">Workforce management and crew accountability</div>
+      </div>
+      <div class="value-card">
+        <div class="value-icon">🎯</div>
+        <div class="value-label">Leadership</div>
+        <div class="value-desc">SOPs, decision frameworks, owner operations</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">System Modules</div>
+    <ul class="feature-list">
+      <li>Standard Operating Procedures (SOPs) for all crew roles</li>
+      <li>Dispatch and scheduling workflows for ready-mix deliveries</li>
+      <li>Equipment maintenance and inspection checklists</li>
+      <li>Customer communication templates and escalation protocols</li>
+      <li>Crew scheduling and time tracking frameworks</li>
+      <li>Safety and compliance documentation</li>
+      <li>Owner operations dashboard and reporting structure</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Operations Stack</div>
+    <div class="tech-tags">
+      <span class="tag">SOPs</span>
+      <span class="tag">Dispatch</span>
+      <span class="tag">Scheduling</span>
+      <span class="tag">Ready-Mix</span>
+      <span class="tag">Concrete</span>
+      <span class="tag">North Alabama</span>
+      <span class="tag">Small Business</span>
+      <span class="tag">Leadership</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Built by Shane Brazelton + Claude Anthropic · Hazel Green, AL</p>
+    <p style="margin-top:0.5rem"><a href="https://github.com/thebardchat/SB-Management-OS" style="color:#374151">github.com/thebardchat/SB-Management-OS</a></p>
+  </div>
+</div>
+
+<div style="position:fixed;bottom:0;left:0;right:0;z-index:999;background:linear-gradient(90deg,#060910,#0b1124,#060910);border-top:1px solid #1e3060;padding:0.6rem 1.5rem;display:flex;align-items:center;justify-content:center;gap:1.2rem;font-family:monospace;font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;">
+  <span style="width:7px;height:7px;border-radius:50%;background:#f59e0b;box-shadow:0 0 8px #f59e0b;display:inline-block;"></span>
+  <span style="color:#3d5a78;">Try Claude free for 2 weeks —</span>
+  <a href="https://claude.ai/referral/4fAMYN9Ing" target="_blank" rel="noopener" style="color:#00b4d8;text-decoration:none;">Start your free trial →</a>
+  <span style="color:#3d5a78;">· AI behind this ecosystem</span>
+</div>
+
+<script>
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+let W, H;
+
+function resize(){
+  W = canvas.width = window.innerWidth;
+  H = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// Concrete particle simulation
+const particles = [];
+for(let i=0;i<120;i++){
+  particles.push({
+    x: Math.random()*1400-100,
+    y: Math.random()*900,
+    vx: (Math.random()-0.5)*0.3,
+    vy: (Math.random()-0.5)*0.3,
+    r: Math.random()*3+1,
+    a: Math.random()*0.15+0.03,
+    gray: Math.floor(Math.random()*60+30)
+  });
+}
+
+// Grid lines
+function drawGrid(){
+  ctx.strokeStyle = 'rgba(60,60,60,0.08)';
+  ctx.lineWidth = 1;
+  for(let x=0;x<W;x+=60){
+    ctx.beginPath();
+    ctx.moveTo(x,0);
+    ctx.lineTo(x,H);
+    ctx.stroke();
+  }
+  for(let y=0;y<H;y+=60){
+    ctx.beginPath();
+    ctx.moveTo(0,y);
+    ctx.lineTo(W,y);
+    ctx.stroke();
+  }
+}
+
+function draw(){
+  ctx.fillStyle = 'rgba(17,17,17,0.2)';
+  ctx.fillRect(0,0,W,H);
+
+  drawGrid();
+
+  particles.forEach(p=>{
+    p.x += p.vx;
+    p.y += p.vy;
+    if(p.x<-10)p.x=W+10;
+    if(p.x>W+10)p.x=-10;
+    if(p.y<-10)p.y=H+10;
+    if(p.y>H+10)p.y=-10;
+
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.r, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(${p.gray},${p.gray},${p.gray},${p.a})`;
+    ctx.fill();
+  });
+
+  // Connection lines between close particles
+  for(let i=0;i<particles.length;i++){
+    for(let j=i+1;j<particles.length;j++){
+      const dx = particles[i].x-particles[j].x;
+      const dy = particles[i].y-particles[j].y;
+      const d = Math.sqrt(dx*dx+dy*dy);
+      if(d<80){
+        ctx.beginPath();
+        ctx.moveTo(particles[i].x, particles[i].y);
+        ctx.lineTo(particles[j].x, particles[j].y);
+        ctx.strokeStyle = `rgba(80,80,80,${0.05*(1-d/80)})`;
+        ctx.lineWidth = 0.5;
+        ctx.stroke();
+      }
+    }
+  }
+
+  requestAnimationFrame(draw);
+}
+draw();
+</script>
+</body>
+</html>
