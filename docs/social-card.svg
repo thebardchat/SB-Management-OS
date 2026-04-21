@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#111111;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#1a1a1a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Concrete texture (subtle dots) -->
+  <g fill="#333" opacity="0.15">
+    <circle cx="200" cy="100" r="2"/><circle cx="350" cy="80" r="1.5"/><circle cx="480" cy="130" r="2"/>
+    <circle cx="600" cy="90" r="1"/><circle cx="720" cy="110" r="2"/><circle cx="850" cy="70" r="1.5"/>
+    <circle cx="980" cy="120" r="2"/><circle cx="1100" cy="85" r="1"/>
+    <circle cx="250" cy="450" r="2"/><circle cx="420" cy="470" r="1.5"/><circle cx="580" cy="440" r="2"/>
+    <circle cx="740" cy="460" r="1"/><circle cx="900" cy="450" r="2"/>
+  </g>
+
+  <!-- Grid lines -->
+  <g stroke="#333" stroke-width="0.5" opacity="0.3">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Core values icons (right side) -->
+  <g transform="translate(820, 140)">
+    <rect x="0" y="0" width="300" height="280" rx="6" fill="#1a1a1a" stroke="#444" stroke-width="1.5"/>
+    <text x="20" y="35" font-family="monospace" font-size="11" fill="#6b7280" letter-spacing="0.15em">CORE VALUES</text>
+    <line x1="20" y1="45" x2="280" y2="45" stroke="#444" stroke-width="1"/>
+    <!-- Service -->
+    <rect x="20" y="58" width="4" height="30" fill="#9ca3af"/>
+    <text x="35" y="70" font-family="monospace" font-size="16" font-weight="bold" fill="#d1d5db">SERVICE</text>
+    <text x="35" y="85" font-family="monospace" font-size="11" fill="#4b5563">Customer-first dispatch</text>
+    <!-- Cleanliness -->
+    <rect x="20" y="105" width="4" height="30" fill="#6b7280"/>
+    <text x="35" y="117" font-family="monospace" font-size="16" font-weight="bold" fill="#d1d5db">CLEANLINESS</text>
+    <text x="35" y="132" font-family="monospace" font-size="11" fill="#4b5563">Site and equipment standards</text>
+    <!-- Labor -->
+    <rect x="20" y="152" width="4" height="30" fill="#9ca3af"/>
+    <text x="35" y="164" font-family="monospace" font-size="16" font-weight="bold" fill="#d1d5db">LABOR</text>
+    <text x="35" y="179" font-family="monospace" font-size="11" fill="#4b5563">Workforce management</text>
+    <!-- Leadership -->
+    <rect x="20" y="199" width="4" height="30" fill="#6b7280"/>
+    <text x="35" y="211" font-family="monospace" font-size="16" font-weight="bold" fill="#d1d5db">LEADERSHIP</text>
+    <text x="35" y="226" font-family="monospace" font-size="11" fill="#4b5563">SOPs · Decision frameworks</text>
+    <!-- North AL badge -->
+    <rect x="20" y="248" width="130" height="22" rx="3" fill="#0a0a0a" stroke="#444" stroke-width="1"/>
+    <text x="85" y="263" text-anchor="middle" font-family="monospace" font-size="11" fill="#6b7280">NORTH ALABAMA</text>
+  </g>
+
+  <!-- Corner brackets -->
+  <g stroke="#555" stroke-width="2" fill="none" opacity="0.6">
+    <polyline points="20,20 20,70 70,70"/>
+    <polyline points="1180,20 1180,70 1130,70"/>
+    <polyline points="20,610 20,560 70,560"/>
+    <polyline points="1180,610 1180,560 1130,560"/>
+  </g>
+
+  <!-- Main title -->
+  <text x="100" y="120" font-family="monospace" font-size="38" font-weight="bold" fill="#9ca3af">SB MANAGEMENT OS</text>
+  <line x1="100" y1="135" x2="700" y2="135" stroke="#555" stroke-width="2"/>
+
+  <!-- Company name -->
+  <text x="100" y="200" font-family="monospace" font-size="52" font-weight="bold" fill="#d1d5db">SRM</text>
+  <text x="100" y="255" font-family="monospace" font-size="40" font-weight="bold" fill="#9ca3af">CONCRETE</text>
+
+  <!-- Tagline -->
+  <text x="100" y="300" font-family="monospace" font-size="16" fill="#6b7280">Ready-Mix Concrete · Hazel Green, AL</text>
+
+  <!-- Description -->
+  <text x="100" y="340" font-family="monospace" font-size="15" fill="#4b5563">Small Business Management Operating System</text>
+  <text x="100" y="362" font-family="monospace" font-size="15" fill="#4b5563">SOPs · Dispatch · Scheduling · Operations Toolkit</text>
+
+  <!-- Module chips -->
+  <g font-family="monospace" font-size="12">
+    <rect x="100" y="385" width="90" height="26" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+    <text x="145" y="403" text-anchor="middle" fill="#9ca3af">DISPATCH</text>
+
+    <rect x="202" y="385" width="90" height="26" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+    <text x="247" y="403" text-anchor="middle" fill="#9ca3af">SCHEDULE</text>
+
+    <rect x="304" y="385" width="90" height="26" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+    <text x="349" y="403" text-anchor="middle" fill="#9ca3af">SOPs</text>
+
+    <rect x="406" y="385" width="90" height="26" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+    <text x="451" y="403" text-anchor="middle" fill="#9ca3af">SAFETY</text>
+
+    <rect x="508" y="385" width="100" height="26" rx="3" fill="#1a1a1a" stroke="#555" stroke-width="1"/>
+    <text x="558" y="403" text-anchor="middle" fill="#9ca3af">REPORTING</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="580" width="1200" height="50" fill="#0a0a0a" opacity="0.95"/>
+  <line x1="0" y1="580" x2="1200" y2="580" stroke="#444" stroke-width="1" opacity="0.6"/>
+  <text x="30" y="611" font-family="monospace" font-size="13" fill="#4b5563">github.com/thebardchat/SB-Management-OS</text>
+  <text x="1170" y="611" text-anchor="end" font-family="monospace" font-size="13" fill="#4b5563">Built by Shane + Claude Anthropic</text>
+</svg>
